@@ -1,4 +1,5 @@
 use leptos::*;
+use leptos_router::*;
 
 /// Renders the home page of your application.
 #[component]
@@ -23,7 +24,7 @@ fn Home() -> impl IntoView {
         </picture>
 
         <ActionForm action=increment_count>
-            <button >"Click Me: " {move || count()}</button>
+            <button >"Click Me: " {move || count.get()}</button>
         </ActionForm>
     }
 }

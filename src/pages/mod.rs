@@ -1,2 +1,2 @@
-mod home;
-mod notfound;
+pub mod home;
+pub mod notfound;
