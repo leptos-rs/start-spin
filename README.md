@@ -33,7 +33,7 @@ For the full [Spin CLI install instructions see here][spin-install].
 
 To generate your own repo from this starter template, run
 ```sh
-cargo generate rust-wasm-wasi/spin-leptos-ssr-starter
+cargo generate --git https://github.com/Rust-WASM-WASI/spin_leptos_ssr_starter
 ```
 
 to generate a new project template. Then
