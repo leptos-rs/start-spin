@@ -4,7 +4,7 @@ use spin_sdk::http::{IncomingRequest, ResponseOutparam};
 use spin_sdk::http_component;
 
 #[http_component]
-async fn handle_{{project-name}}(req: IncomingRequest, resp_out: ResponseOutparam) {
+async fn handle_{{project-name | snake_case}}(req: IncomingRequest, resp_out: ResponseOutparam) {
     let mut conf = leptos::get_configuration(None).await.unwrap();
     conf.leptos_options.output_name = "{{project-name | snake_case}}".to_owned();
 
