@@ -57,8 +57,16 @@ spin watch
 
 this will build and run your server, and recompile after you make changes to your code.
 
+Using
+```sh
+spin build --up
+```
+will also run your app locally.
+
 
 ## Release and Deployment
+
+To deploy your app to [Fermyon Cloud signup here][spin-signup].
 
 Running
 ```sh
@@ -74,3 +82,4 @@ will publish your app to Fermyon cloud.
 
 [leptos]: https://github.com/leptos-rs/leptos
 [spin-install]: https://developer.fermyon.com/spin/v2/install
+[spin-signup]: https://cloud.fermyon.com/
