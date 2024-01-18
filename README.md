@@ -27,7 +27,7 @@ Once you have the Spin CLI tool downloaded, we recommend putting the binary into
 sudo mv spin /usr/local/bin/
 ```
 
-For the full [Spin CLI install instructions see here.][spin-install]
+For the full [Spin CLI install instructions see here][spin-install].
 
 <br/>
 
@@ -69,7 +69,7 @@ will also run your app locally.
 
 ## Release and Deployment
 
-To deploy your app to [Fermyon Cloud signup here first][spin-signup]. For more information on [Ferymon Cloud see here.][spin-cloud-info]
+To deploy your app to [Fermyon Cloud signup here first][spin-signup]. For more information on [Ferymon Cloud see here][spin-cloud-info].
 
 After you have your Fermyon cloud account, running
 ```sh
