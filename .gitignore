@@ -1,0 +1,5 @@
+target/
+.spin/
+.vscode
+.envrc
+.direnv
