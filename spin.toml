@@ -1,21 +1,22 @@
 spin_manifest_version = 2
 
 [application]
-name = "benwis_spin"
+name = "{{project-name}}"
 version = "0.1.0"
-authors = ["benwis <ben@celcyon.com>"]
+authors = ["{{authors}}"]
 description = ""
 
 [[trigger.http]]
 route = "/..."
-component = "benwis-spin"
+component = "{{project-name}}"
 
-[component.benwis-spin]
-source = "target/wasm32-wasi/release/benwis_spin.wasm"
+[component.{{project-name}}]
+source = "target/wasm32-wasi/release/{{project-name}}.wasm"
 allowed_outbound_hosts = []
 key_value_stores = ["default"]
-[component.benwis-spin.build]
-command = "cargo leptos build --release && LEPTOS_OUTPUT_NAME=benwis_spin cargo build --lib --target wasm32-wasi --release --no-default-features --features ssr"
+
+[component.{{project-name}}.build]
+command = "cargo leptos build --release && LEPTOS_OUTPUT_NAME={{project-name}} cargo build --lib --target wasm32-wasi --release --no-default-features --features ssr"
 watch = ["src/**/*.rs", "Cargo.toml"]
 
 [[trigger.http]]

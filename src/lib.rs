@@ -1,4 +1,6 @@
 mod app;
+mod notfound;
+
 #[cfg(feature = "ssr")]
 mod server;
 
