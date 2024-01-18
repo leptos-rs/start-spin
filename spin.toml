@@ -1,7 +1,7 @@
 spin_manifest_version = 2
 
 [application]
-name = "{{project-name | snake_case}}"
+name = "{{project-name}}"
 version = "0.1.0"
 authors = ["{{authors}}"]
 description = ""
@@ -10,13 +10,13 @@ description = ""
 route = "/..."
 component = "{{project-name}}"
 
-[component.{{project-name | snake_case}}]
+[component.{{project-name | kebab_case}}]
 source = "target/wasm32-wasi/release/{{project-name}}.wasm"
 allowed_outbound_hosts = []
 key_value_stores = ["default"]
 
-[component.{{project-name | snake_case}}.build]
-command = "cargo leptos build --release && LEPTOS_OUTPUT_NAME={{project-name | snake_case}} cargo build --lib --target wasm32-wasi --release --no-default-features --features ssr"
+[component.{{project-name | kebab_case}}.build]
+command = "cargo leptos build --release && LEPTOS_OUTPUT_NAME={{project-name}} cargo build --lib --target wasm32-wasi --release --no-default-features --features ssr"
 watch = ["src/**/*.rs", "Cargo.toml"]
 
 [[trigger.http]]
