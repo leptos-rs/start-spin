@@ -9,8 +9,8 @@ async fn handle_{{project-name}}(req: IncomingRequest, resp_out: ResponseOutpara
     conf.leptos_options.output_name = "{{project-name}}".to_owned();
 
     // Register server functions
-    crate::app::GetCount::register_explicit().unwrap();
-    crate::app::UpdateCount::register_explicit().unwrap();
+    crate::pages::home::GetCount::register_explicit().unwrap();
+    crate::pages::home::UpdateCount::register_explicit().unwrap();
 
     let app_fn = crate::app::App;
 
