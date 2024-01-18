@@ -38,14 +38,14 @@ pub async fn update_count() -> Result<(), ServerFnError> {
     let store = spin_sdk::key_value::Store::open_default()?;
 
     let count: u64 = store
-        .get_json("{{project-name}}_count")
+        .get_json("{{project-name | snake_case}}_count")
         .map_err(|e| ServerFnError::ServerError(e.to_string()))?
         .unwrap_or_default();
 
     let updated_count = count + 1;
 
     store
-        .set_json("{{project-name}}_count", &updated_count)
+        .set_json("{{project-name | snake_case}}_count", &updated_count)
         .map_err(|e| ServerFnError::ServerError(e.to_string()))?;
     Ok(())
 }
@@ -55,7 +55,7 @@ pub async fn get_count() -> Result<u64, ServerFnError> {
     let store = spin_sdk::key_value::Store::open_default()?;
 
     let stored_count: u64 = store
-        .get_json("{{project-name}}_count")
+        .get_json("{{project-name | snake_case}}_count")
         .map_err(|e| ServerFnError::ServerError(e.to_string()))?
         .ok_or_else(|| ServerFnError::ServerError("Failed to get count".to_string()))?;
 
