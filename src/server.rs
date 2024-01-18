@@ -17,5 +17,5 @@ async fn handle_{{project-name}}(req: IncomingRequest, resp_out: ResponseOutpara
     let mut routes = RouteTable::build(app_router);
     routes.add_server_fn_prefix("/api").unwrap();
 
-    render_best_match_to_stream(req, resp_out, &routes, app_fn, &conf.leptos_options).await
+    render_best_match_to_stream(req, resp_out, &routes, app_router, &conf.leptos_options).await
 }
