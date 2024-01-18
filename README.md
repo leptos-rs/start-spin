@@ -27,10 +27,11 @@ Once you have the Spin CLI tool downloaded, we recommend putting the binary into
 sudo mv spin /usr/local/bin/
 ```
 
-for the full [Spin CLI install instructions see here.][spin-install]
+For the full [Spin CLI install instructions see here.][spin-install]
 
+<br/>
 
-Then to generate your own repo from this starter template, run
+To generate your own repo from this starter template, run
 ```sh
 cargo generate rust-wasm-wasi/spin-leptos-ssr-starter
 ```
@@ -43,19 +44,21 @@ cd {{project-name}}
 
 to go to your newly created project.
 
+<br/>
+
 Feel free to explore the project structure, but the best place to start with your application code is in `src/pages/home.rs`.
 
 
 Additionally, Cargo.toml may need updating as new versions of the dependencies are released, especially if things are not working after a `cargo update`.
 
-## Running / Developing Your Project
+## Running & Developing Your Project
 
-Run
+Running
 ```sh
 spin watch
 ```
 
-this will build and run your server, and recompile after you make changes to your code.
+will build and run your server as well as recompile your code after making changes.
 
 Using
 ```sh
@@ -66,9 +69,9 @@ will also run your app locally.
 
 ## Release and Deployment
 
-To deploy your app to [Fermyon Cloud signup here][spin-signup].
+To deploy your app to [Fermyon Cloud signup here first][spin-signup]. For more information on [Ferymon Cloud see here.][spin-cloud-info]
 
-Running
+After you have your Fermyon cloud account, running
 ```sh
 spin build
 ```
@@ -83,3 +86,4 @@ will publish your app to Fermyon cloud.
 [leptos]: https://github.com/leptos-rs/leptos
 [spin-install]: https://developer.fermyon.com/spin/v2/install
 [spin-signup]: https://cloud.fermyon.com/
+[spin-cloud-info]: https://www.fermyon.com/cloud
