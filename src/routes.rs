@@ -6,7 +6,7 @@ use crate::pages::home::Home;
 use crate::pages::notfound::NotFound;
 
 #[component]
-pub fn App() -> impl IntoView {
+pub fn AppRouter() -> impl IntoView {
     // Provides context that manages stylesheets, titles, meta tags, etc.
     provide_meta_context();
 

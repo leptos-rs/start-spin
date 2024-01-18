@@ -2,7 +2,7 @@ use leptos::*;
 
 /// 404 - Not Found
 #[component]
-fn NotFound() -> impl IntoView {
+pub fn NotFound() -> impl IntoView {
     // set an HTTP status code 404
     // this is feature gated because it can only be done during
     // initial server-side rendering

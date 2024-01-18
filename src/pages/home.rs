@@ -3,7 +3,7 @@ use leptos_router::*;
 
 /// Renders the home page of your application.
 #[component]
-fn Home() -> impl IntoView {
+pub fn Home() -> impl IntoView {
     // Creates a reactive value to update the button
     let increment_count = create_server_action::<UpdateCount>();
 
@@ -18,9 +18,9 @@ fn Home() -> impl IntoView {
     );
 
     view! {
-        <picture>
+        <picture class="img">
             <source srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_pref_dark_RGB.svg" media="(prefers-color-scheme: dark)" />
-            <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo" />
+            <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo" height="200" width="400" />
         </picture>
 
         <ActionForm action=increment_count>

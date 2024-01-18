@@ -14,18 +14,6 @@ body {
   text-align: center;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 h1,
 h2,
 h3,
@@ -34,19 +22,17 @@ h5,
 h6 {
   text-align: center;
   margin: 0 auto;
-  padding: 2rem;
+  padding: var(--size-7);
 }
 
 p,
 button {
-  margin: var(--size-6);
+  margin: 0 auto;
 }
 
-body > picture,
-button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  margin: 2rem;
+.img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }

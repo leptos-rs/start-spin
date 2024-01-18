@@ -12,9 +12,9 @@ async fn handle_{{project-name}}(req: IncomingRequest, resp_out: ResponseOutpara
     crate::pages::home::GetCount::register_explicit().unwrap();
     crate::pages::home::UpdateCount::register_explicit().unwrap();
 
-    let app_fn = crate::app::App;
+    let app_router = crate::routes::AppRouter;
 
-    let mut routes = RouteTable::build(app_fn);
+    let mut routes = RouteTable::build(app_router);
     routes.add_server_fn_prefix("/api").unwrap();
 
     render_best_match_to_stream(req, resp_out, &routes, app_fn, &conf.leptos_options).await
