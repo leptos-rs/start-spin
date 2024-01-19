@@ -97,4 +97,4 @@ If you would like to deploy your Leptos-Spin app via Kubernetes, see [the setup 
 [spin-signup]: https://cloud.fermyon.com/
 [spin-cloud-info]: https://www.fermyon.com/cloud
 [docker-spin]: https://www.fermyon.com/blog/spin-in-docker
-[k8s-spin]: 
+[k8s-spin]: https://developer.fermyon.com/spin/v2/kubernetes
