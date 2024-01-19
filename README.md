@@ -7,6 +7,8 @@
 
 This is a template for use with the [Leptos][leptos] web framework and the [Spin][spin-install] WASI platform.
 
+[Click here to see the deployed version of this starter](https://spin-leptos-ssr-49mccqzz.fermyon.app).
+
 ## Creating Your Repo
 
 First, ensure that you have Rust 'nightly with both the `wasm` and `wasm32-wasi` targets, along with `cargo-generate`
