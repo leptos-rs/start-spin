@@ -73,11 +73,11 @@ will build and serve your app on `127.0.0.1:3000` by default. To serve at a diff
 
 To deploy your app to [Fermyon Cloud signup here first][spin-signup]. For more information on [Ferymon Cloud see here][spin-cloud-info].
 
-After you have your Fermyon cloud account, running
+After you have your Fermyon cloud account and have logged in using `spin login`, running
 ```sh
 spin build
 ```
-will build your application for release and
+will build your application for release. Running
 
 ```sh
 spin deploy
