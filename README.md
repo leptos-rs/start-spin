@@ -64,9 +64,9 @@ will build and run your server as well as recompile your code after making chang
 
 Using
 ```sh
-spin build --up
+spin up
 ```
-will also run your app locally.
+will build and serve your app on `127.0.0.1:3000` by default. To serve at a different address, use `spin up --listen <ADDRESS>`.
 
 
 ## Release and Deployment
