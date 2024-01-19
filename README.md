@@ -64,28 +64,37 @@ will build and run your server as well as recompile your code after making chang
 
 Using
 ```sh
-spin build --up
+spin up
 ```
-will also run your app locally.
+will build and serve your app on `127.0.0.1:3000` by default. To serve at a different address, use `spin up --listen <ADDRESS>`.
 
 
 ## Release and Deployment
 
 To deploy your app to [Fermyon Cloud signup here first][spin-signup]. For more information on [Ferymon Cloud see here][spin-cloud-info].
 
-After you have your Fermyon cloud account, running
+After you have your Fermyon cloud account and have logged in using `spin login`, running
 ```sh
 spin build
 ```
-will build your application for release and
+will build your application for release. Running
 
 ```sh
 spin deploy
 ```
 will publish your app to Fermyon cloud.
 
+If you would prefer to deploy your app on own machine or in a VM with Docker rather than on Fermyon Cloud, see [the Spin in Docker setup instructions here][docker-spin]. 
+
+<br/>
+
+If you would like to deploy your Leptos-Spin app via Kubernetes, see [the setup instructions for Spin on Kubernetes here][k8s-spin].
+
+
 
 [leptos]: https://github.com/leptos-rs/leptos
 [spin-install]: https://developer.fermyon.com/spin/v2/install
 [spin-signup]: https://cloud.fermyon.com/
 [spin-cloud-info]: https://www.fermyon.com/cloud
+[docker-spin]: https://www.fermyon.com/blog/spin-in-docker
+[k8s-spin]: https://developer.fermyon.com/spin/v2/kubernetes
