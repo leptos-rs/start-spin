@@ -12,7 +12,7 @@ pub fn AppRouter() -> impl IntoView {
 
     view! {
         // injects a stylesheet into the document <head>
-        <Stylesheet id="leptos" href="/pkg/{{project-name | kebab_case}}.css"/>
+        <Stylesheet id="leptos" href="/pkg/{{crate_name}}.css"/>
 
         // sets the document title
         <Title text="Welcome to Leptos"/>
