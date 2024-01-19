@@ -84,6 +84,8 @@ spin deploy
 ```
 will publish your app to Fermyon cloud.
 
+If you would prefer to deploy your app on own machine or in a VM with Docker rather than on Fermyon Cloud, see [the Spin in Docker setup instructions here](https://www.fermyon.com/blog/spin-in-docker). 
+
 
 [leptos]: https://github.com/leptos-rs/leptos
 [spin-install]: https://developer.fermyon.com/spin/v2/install
