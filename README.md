@@ -11,7 +11,7 @@ This is a template for use with the [Leptos][leptos] web framework and the [Spin
 
 ## Creating Your Repo
 
-First, ensure that you have Rust 'nightly with both the `wasm` and `wasm32-wasi` targets, along with `cargo-generate`
+First, ensure that you have Rust 'nightly' with both the `wasm` and `wasm32-wasi` targets, along with `cargo-generate`
 - `rustup toolchain install nightly --allow-downgrade`
 - `rustup target add wasm32-unknown-unknown`
 - `rustup target add wasm32-wasi`
@@ -38,7 +38,7 @@ To generate your own repo from this starter template, run
 cargo generate --git https://github.com/Rust-WASM-WASI/spin_leptos_ssr_starter
 ```
 
-to generate a new project template. Then
+Then
 
 ```sh
 cd {{project-name}}
