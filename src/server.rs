@@ -1,5 +1,5 @@
 use leptos::ServerFn;
-use leptos_spin::{render_best_match_to_stream, RouteTable};
+use leptos_spin::{render_best_match_to_stream, RouteTable, server_fn::register_explicit};
 use spin_sdk::http::{IncomingRequest, ResponseOutparam};
 use spin_sdk::http_component;
 
@@ -9,8 +9,8 @@ async fn handle_{{crate_name}}(req: IncomingRequest, resp_out: ResponseOutparam)
     conf.leptos_options.output_name = "{{crate_name}}".to_owned();
 
     // Register server functions
-    crate::pages::home::GetCount::register_explicit().unwrap();
-    crate::pages::home::UpdateCount::register_explicit().unwrap();
+    register_explicit::<crates::pages::home::GetCount>();
+    register_explicit::<crate::pages::home::UpdateCount>();
 
     let app_router = crate::routes::AppRouter;
 

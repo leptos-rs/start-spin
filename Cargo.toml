@@ -2,7 +2,7 @@
 name = "{{project-name}}"
 authors = ["{{authors}}"]
 description = ""
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [lib]
@@ -44,7 +44,7 @@ ssr = [
 
 [package.metadata.leptos]
 # The name used by wasm-bindgen/cargo-leptos for the JS/WASM bundle. Defaults to the crate name
-output-name = "{{crate_name}}"
+bin-target-triple = "wasm32-wasi"
 style-file = "public/main.css"
 bin-features = ["ssr"]
 bin-default-features = false
