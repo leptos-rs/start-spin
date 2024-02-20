@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::{server_fn::error::NoCustomError, *};
 use leptos_router::*;
 
 /// Renders the home page of your application.
@@ -31,7 +31,7 @@ pub fn Home() -> impl IntoView {
     }
 }
 
-#[server(UpdateCount, "/api")]
+#[server]
 pub async fn update_count() -> Result<(), ServerFnError> {
     println!("Upated count");
 
@@ -39,25 +39,27 @@ pub async fn update_count() -> Result<(), ServerFnError> {
 
     let count: u64 = store
         .get_json("{{crate_name}}_count")
-        .map_err(|e| ServerFnError::ServerError(e.to_string()))?
+        .map_err(|e| ServerFnError::new(e))?
         .unwrap_or_default();
 
     let updated_count = count + 1;
 
     store
         .set_json("{{crate_name}}_count", &updated_count)
-        .map_err(|e| ServerFnError::ServerError(e.to_string()))?;
+        .map_err(|e| ServerFnError::new(e))?;
     Ok(())
 }
 
-#[server(GetCount, "/api")]
+#[server]
 pub async fn get_count() -> Result<u64, ServerFnError> {
     let store = spin_sdk::key_value::Store::open_default()?;
 
     let stored_count: u64 = store
         .get_json("{{crate_name}}_count")
-        .map_err(|e| ServerFnError::ServerError(e.to_string()))?
-        .ok_or_else(|| ServerFnError::ServerError("Failed to get count".to_string()))?;
+        .map_err(|e| ServerFnError::new(e))?
+        .ok_or_else(|| {
+            ServerFnError::<NoCustomError>::ServerError("Failed to get count".to_string())
+        })?;
 
     println!("Got stored {stored_count}");
 
